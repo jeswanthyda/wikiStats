@@ -1,14 +1,25 @@
 {
-  "name": "wikistats",
-  "version": "0.1.0",
+  "name": "WikiStats",
+  "version": "1.0.2",
+  "description": "Wikipedia RecentChanges Analytics Dashboard",
+  "author": "Sidharth Bambah, Jeswanth Yadagani, Ruturaj Nene, Vedant Dave",
+  "homepage": "",
+  "copyright": "Copyright 2020 WikiStats",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "acorn": "^7.1.1",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.7.3",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "^16.8.1",
+    "react-feather": "^2.0.3",
+    "react-fontawesome": "^1.7.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,16 +30,10 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
