@@ -40,8 +40,7 @@ def publishWikiChangeKafka():
             #Publish each new event to the 'wikipedia' kafka topic    
             try:
                 #How to deal with Non-ascii values? Will it have any impact?
-                #producer.send(KAFKA_TOPIC, value=dumps(useful_info,ensure_ascii=False).encode('utf-8'))
-                producer.send(KAFKA_TOPIC, value=dumps(change,ensure_ascii=False).encode('utf-8'))
+                producer.send(KAFKA_TOPIC, value=dumps(useful_info,ensure_ascii=False).encode('utf-8'))
             except:
                 pass
             
