@@ -20,22 +20,24 @@ def publishWikiChangeKafka():
             except ValueError:
                 pass
             else:
-                if(change['type'] == 'edit'):
-                    if(change['length']['old'] > change['length']['new']):
-                        useful_info['class'] = 'Deletion'
+                try:
+                    if(change['type'] == 'edit'):
+                        if(change['length']['old'] > change['length']['new']):
+                            useful_info['class'] = 'Deletion'
+                        else:
+                            useful_info['class'] = 'Addition'
                     else:
-                        useful_info['class'] = 'Addition'
-                else:
-                    useful_info['class'] = 'Not edit'
-                useful_info['Type'] = change['type']
-                useful_info['Domain'] = change['meta']['domain']
-                useful_info['Title'] = change['title']
-                useful_info['BOT'] = change['bot']
-                useful_info['User'] = change['user']
-                useful_info['Timestamp'] = change['timestamp']
-                useful_info['Comment'] = change['comment']
-                useful_info['Topic'] = change['meta']['topic']
-                useful_info['Wiki'] = change['wiki']
+                        useful_info['class'] = 'Not edit'
+                    useful_info['Type'] = change['type']
+                    useful_info['Domain'] = change['meta']['domain']
+                    useful_info['Title'] = change['title']
+                    useful_info['BOT'] = change['bot']
+                    useful_info['User'] = change['user']
+                    useful_info['Timestamp'] = change['timestamp']
+                    useful_info['Comment'] = change['comment']
+                    useful_info['Topic'] = change['meta']['topic']
+                    useful_info['Wiki'] = change['wiki']
+                except: pass
                 
             #Publish each new event to the 'wikipedia' kafka topic    
             try:
