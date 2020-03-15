@@ -2,8 +2,7 @@ from kafka import KafkaProducer
 from sseclient import SSEClient as EventSource
 from json import dumps,loads
 
-# KAFKA_BROKER = '35.231.177.25:9092' #Jeswanth
-KAFKA_BROKER = '35.185.103.25:9092' #Sid
+KAFKA_BROKER = '35.185.103.25:9092'
 KAFKA_TOPIC = 'wikipedia'
 DATA_SOURCE = 'https://stream.wikimedia.org/v2/stream/recentchange'
 
@@ -23,15 +22,15 @@ def publishWikiChangeKafka():
                 try:
                     if(change['type'] == 'edit'):
                         if(change['length']['old'] > change['length']['new']):
-                            useful_info['class'] = 'Deletion'
+                            useful_info['Class'] = 'deletions'
                         else:
-                            useful_info['class'] = 'Addition'
+                            useful_info['Class'] = 'additions'
                     else:
-                        useful_info['class'] = 'Not edit'
+                        useful_info['Class'] = 'noedits'
                     useful_info['Type'] = change['type']
                     useful_info['Domain'] = change['meta']['domain']
                     useful_info['Title'] = change['title']
-                    useful_info['BOT'] = change['bot']
+                    useful_info['BOT'] = str(change['bot'])
                     useful_info['User'] = change['user']
                     useful_info['Timestamp'] = change['timestamp']
                     useful_info['Comment'] = change['comment']
