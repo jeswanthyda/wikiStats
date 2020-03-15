@@ -1,9 +1,9 @@
-// Connection to NodeJS Static API
+// Connection to Flask Static API
 
 const APIConnection = {
     //Local
-    "endpoint": "http://127.0.0.1:8080/"
+    //"endpoint": "http://127.0.0.1:8080/"
     //Live
-    //"endpoint": "http://35.185.103.25:8080/"
+    "endpoint": "http://lsp-backend-flask.herokuapp.com/"
 }
 export default APIConnection
