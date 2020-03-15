@@ -84,8 +84,11 @@ export default class DashboardLayout extends Component {
             </Page>
           </div>
           <Footer>
+            <div className="text-center">
             <span>Copyright © 2020. All rights reserved.</span>
+            <br />
             <span>Developed by Sidharth Bambah, Jeswanth Yadagani, Ruturaj Nene, and Vedant Dave.</span>
+            </div>
           </Footer>
         </div>
       </ContextProviders>
