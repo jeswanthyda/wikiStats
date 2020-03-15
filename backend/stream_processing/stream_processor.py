@@ -15,11 +15,11 @@ import datetime
 from datetime import date
 import calendar
 
-
+print('Initializing stream_processor')
 
 #Global Variables for Kafka
 KAFKA_TOPIC_read = 'wikipedia'
-KAFKA_BROKER_read = '127.0.0.1:9092'
+KAFKA_BROKER_read = '35.231.177.25:9092'
 
 #Global Variables for Line Charts
 additionLineChartData = []
@@ -66,8 +66,8 @@ def window_sendToKafka(rdd):
     def doWrite():
         # Kafka Producer
         KAFKA_TOPIC_write = 'processed'
-        #KAFKA_BROKER_write = '35.231.177.25:9092'
-        KAFKA_BROKER_write = '35.185.103.25:9092' 
+        KAFKA_BROKER_write = '35.231.177.25:9092'
+#         KAFKA_BROKER_write = '35.185.103.25:9092' 
         processed_data_producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER_write)
         
         #Restructure data
@@ -146,8 +146,8 @@ def aggregate_sendToKafka(rdd):
     def doWrite():
         # Kafka Producer
         KAFKA_TOPIC_write = 'processed'
-        #KAFKA_BROKER_write = '35.231.177.25:9092'
-        KAFKA_BROKER_write = '35.185.103.25:9092' 
+        KAFKA_BROKER_write = '35.231.177.25:9092'
+#         KAFKA_BROKER_write = '35.185.103.25:9092' 
         processed_data_producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER_write)
                 
         #Restructure data
@@ -225,6 +225,7 @@ def extract_info_window(rdd):
 
 if __name__=='__main__':
     
+    print('Starting Spark Context and Session')
     #Initialize Spark
     sc = SparkContext(appName='WikiStats')
     sparksql = SparkSession(sc)
@@ -240,6 +241,7 @@ if __name__=='__main__':
     ssc = StreamingContext(sc, batch_time)
     ssc.checkpoint("checkpoint_wiki")
     
+    print('Building process pipeline')
     ##Stream Pipeline Design
     wikiKafkaStream = KafkaUtils.createDirectStream(ssc, [KAFKA_TOPIC_read], {"metadata.broker.list": KAFKA_BROKER_read})
 
@@ -260,6 +262,7 @@ if __name__=='__main__':
     
     ##Start Stream Pipeline
     ssc.start()
+    print('Streaming Started Successfully')
     start_time = time()
     ssc.awaitTermination()
     end_time = time()
