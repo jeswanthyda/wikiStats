@@ -2,8 +2,8 @@
 
 const APIConnection = {
     //Local
-    //"endpoint": "http://localhost:8080/"
+    "endpoint": "http://localhost:8080/"
     //Live
-    "endpoint": "https://lsp-backend.herokuapp.com/"
+    //"endpoint": "http://35.185.103.25:8080/"
 }
 export default APIConnection

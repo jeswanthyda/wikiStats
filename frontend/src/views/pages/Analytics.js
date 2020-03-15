@@ -10,11 +10,9 @@ import DomainCountDynamicDonut from '../elements/DomainCountDynamicDonut';
 import KeyChangesCard from '../elements/KeyChangesCard';
 import BotPercentCard from '../elements/BotPercentCard';
 import HourlyChangesBarChart from '../elements/HourlyChangesBarChart';
-import AdditionLineChart from '../elements/AdditionLineChart';
-import DeletionLineChart from '../elements/DeletionLineChart';
-import NoeditLineChart from '../elements/NoeditLineChart';
 import UserLeaderboard from '../elements/UserLeaderboard';
 import TopWikiCards from '../elements/TopWikiCards';
+import TrafficLineChart from '../elements/TrafficLineChart';
 
 export default class AnalyticsPage extends Component {
 
@@ -31,32 +29,7 @@ export default class AnalyticsPage extends Component {
         <TopWikiCards />
 
         <Row>
-          <Col md={8} sm={12}>
-            <Card>
-              <CardHeader>Addition Traffic</CardHeader>
-              <CardBody>
-                <div className="full-bleed">
-                  <AdditionLineChart />
-                </div>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardHeader>Deletion Traffic</CardHeader>
-              <CardBody>
-                <div className="full-bleed">
-                  <DeletionLineChart />
-                </div>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardHeader>Noedit Traffic</CardHeader>
-              <CardBody>
-                <div className="full-bleed">
-                  <NoeditLineChart />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
+          <TrafficLineChart />
           <Col md={4} sm={12}>
             <Card>
               <CardHeader>Domain Change Frequency</CardHeader>
