@@ -20,6 +20,7 @@ print('Initializing stream_processor')
 #Global Variables for Kafka
 KAFKA_TOPIC_read = 'wikipedia'
 KAFKA_BROKER_read = '35.231.177.25:9092'
+#KAFKA_BROKER_read = '35.185.103.25:9092' 
 
 #Global Variables for Line Charts
 additionLineChartData = []
@@ -48,7 +49,10 @@ def dataLabelRestructure(raw_data):
 def wikiCardsRestructure(raw_data,total_changes):
     structured_dict = {'data':[]}
     for ((out_key,in_key),value) in raw_data:
-        percent = int(round((100*value)/total_changes))
+        try:
+            percent = int(round((100*value)/total_changes))
+        except:
+            percent = 50 # To avoid division by zero in case there are no changes registered
         structured_dict['data'].append({'domain':in_key,'count':value,'percent':percent})
     return structured_dict
 
@@ -116,7 +120,10 @@ def window_sendToKafka(rdd):
         total_changes = bot_count+no_bot_count
         
         #Percentage of bots card
-        bot_percent = int(round((100*bot_count)/total_changes))
+        try:
+            bot_percent = int(round((100*bot_count)/total_changes))
+        except: 
+            bot_percent = 50 # To avoid division by zero in case there are no changes registered
         data_dict['botPercent'] = {"percent":bot_percent}
         
         
@@ -147,7 +154,7 @@ def aggregate_sendToKafka(rdd):
         # Kafka Producer
         KAFKA_TOPIC_write = 'processed'
         KAFKA_BROKER_write = '35.231.177.25:9092'
-#         KAFKA_BROKER_write = '35.185.103.25:9092' 
+        #KAFKA_BROKER_write = '35.185.103.25:9092' 
         processed_data_producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER_write)
                 
         #Restructure data
