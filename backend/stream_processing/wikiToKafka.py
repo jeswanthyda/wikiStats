@@ -2,7 +2,8 @@ from kafka import KafkaProducer
 from sseclient import SSEClient as EventSource
 from json import dumps,loads
 
-KAFKA_BROKER = '35.185.103.25:9092'
+KAFKA_BROKER = '35.231.177.25:9092' #Jeswanth
+# KAFKA_BROKER = '35.185.103.25:9092' #Sid
 KAFKA_TOPIC = 'wikipedia'
 DATA_SOURCE = 'https://stream.wikimedia.org/v2/stream/recentchange'
 
