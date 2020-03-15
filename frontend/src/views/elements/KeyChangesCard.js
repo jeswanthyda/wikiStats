@@ -89,7 +89,7 @@ class KeyChangesCard extends React.Component {
                                 <tbody>
                                 {this.state.usersadditionsList.map((value, index) => {
                                     return (
-                                    <tr key={Math.random()}><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
+                                    <tr key={index}><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
                                     )
                                 })}
                                 </tbody>
@@ -117,7 +117,7 @@ class KeyChangesCard extends React.Component {
                                 </thead>
                                 <tbody>
                                 {this.state.usersdeletionsList.map((value, index) => {
-                                    return <tr><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
+                                    return <tr key={index}><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
                                 })}
                                 </tbody>
                             </Table>
@@ -144,7 +144,7 @@ class KeyChangesCard extends React.Component {
                                 </thead>
                                 <tbody>
                                 {this.state.usersnoeditsList.map((value, index) => {
-                                    return <tr><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
+                                    return <tr key={index}><td>{index+1}</td><td>{value[0]}</td><td>{value[1]}</td></tr>
                                 })}
                                 </tbody>
                             </Table>
