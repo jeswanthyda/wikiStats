@@ -1,5 +1,5 @@
 # WikiStats
-A real-time large scale streaming dashboard to analyze the Recent Changes on Wikepedia.
+A real-time large scale streaming dashboard to analyze the Recent Changes on Wikipedia.
 
 ## Objectives
 
