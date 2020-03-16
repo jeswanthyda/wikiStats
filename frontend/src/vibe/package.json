@@ -1,6 +1,6 @@
 {
-    "name": "vibe",
-    "description": "Vibe Components",
+    "name": "WikiStats",
+    "description": "RecentChanges Analyzer",
     "version": "1.0.0",
     "main": "index.js"
   }

@@ -50,6 +50,7 @@ class HourlyChangesBarChart extends React.Component {
       state = this.values;
       getDataofDay(day){
         //Axios Get Request
+        console.log(APIConnector["endpoint"] + "hourlyChangesBarChart?day=" + day)
         axios.get(APIConnector["endpoint"] + "hourlyChangesBarChart?day=" + day)
             .then((response) => {
                 let data = response.data;

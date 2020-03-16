@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Button, Badge, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Header, SidebarNav, Footer, PageContent, Avatar, PageAlert, Page } from '../vibe';
 import Logo from '../assets/images/vibe-logo.svg';
-import avatar1 from '../assets/images/avatar1.png';
 import nav from '../_nav';
 import routes from '../views';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
@@ -87,7 +86,7 @@ export default class DashboardLayout extends Component {
             <div className="text-center">
             <span>Copyright © 2020. All rights reserved.</span>
             <br />
-            <span>Developed by Sidharth Bambah, Jeswanth Yadagani, Ruturaj Nene, and Vedant Dave.</span>
+            <span>Developed by Sidharth Bambah and Jeswanth Yadagani.</span>
             </div>
           </Footer>
         </div>
