@@ -10,13 +10,16 @@ A real-time large scale streaming dashboard to analyze the Recent Changes on Wik
 WikiStats takes a multifaceted approach for system designed with robust stream processing,
 web backend, and web frontend deployments.
 The overall system structure can be seen below as:
-![image](https://cloud.githubusercontent.com/assets/9053854/24495974/fbf2e0cc-1547-11e7-846c-25b5fac7f6b1.png)
+<br>
+<img src="https://github.com/SidBambah/WikiStats/blob/master/images/architecture/system_architecture.PNG?raw=true"></img>
 
 From a stream processing perspective, the architecture is built as:
-![image](https://cloud.githubusercontent.com/assets/9053854/24495974/fbf2e0cc-1547-11e7-846c-25b5fac7f6b1.png)
+<br>
+<img src="https://github.com/SidBambah/WikiStats/blob/master/images/architecture/stream_architecture.PNG?raw=true"></img>
 
 Additionally, the web analytics dashboard architecture is as follows:
-![image](https://cloud.githubusercontent.com/assets/9053854/24495974/fbf2e0cc-1547-11e7-846c-25b5fac7f6b1.png)
+<br>
+<img src="https://github.com/SidBambah/WikiStats/blob/master/images/architecture/web_architecture.PNG?raw=true"></img>
 
 ## Data Source
 
