@@ -29,6 +29,13 @@ event (SSE) stream.
 The stream itself can be found at: https://stream.wikimedia.org/v2/stream/recentchange
 
 ## Screenshots
+
+The home page of the website:
+<br>
+<img height="300" src="https://github.com/SidBambah/WikiStats/blob/master/images/screenshots/homepage.PNG?raw=true"></img>
+
+The main analytics charts and figures:
+
 Note: Further project details can be found in the associated report.
 
 Created by Sidharth Bambah and Jeswanth Yadagani
