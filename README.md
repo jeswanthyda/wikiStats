@@ -45,6 +45,10 @@ The home page of the website:
 <img height="300" src="https://github.com/SidBambah/WikiStats/blob/master/images/screenshots/homepage.PNG?raw=true"></img>
 
 The main analytics charts and figures:
+<br><br>
+<img height="300" src="https://github.com/SidBambah/WikiStats/blob/master/images/screenshots/dashboard_1.PNG?raw=true"></img>
+<br><br>
+<img height="300" src="https://github.com/SidBambah/WikiStats/blob/master/images/screenshots/dashboard_2.PNG?raw=true"></img>
 
 Note: Further project details can be found in the associated report.
 
