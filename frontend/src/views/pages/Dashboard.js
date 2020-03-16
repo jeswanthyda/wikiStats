@@ -22,8 +22,8 @@ class Dashboard extends Component {
             <div className="home-hero" style={heroStyles}>
               <h1>Welcome to WikiStats.</h1>
               <p className="text-muted">
-                Responsive and dynamic analytics dashboard to consume processed streams from the base Wikipedia
-                RecentChanges EventSource stream.
+                Responsive and dynamic analytics dashboard to consume processed streams from the base
+                 <a href="https://stream.wikimedia.org/v2/stream/recentchange" rel="noopener noreferrer" target="_blank"> Wikipedia RecentChanges</a> EventSource stream.
               </p>
             </div>
           </Col>
