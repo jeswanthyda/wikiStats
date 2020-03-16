@@ -28,4 +28,4 @@ The stream itself can be found at: https://stream.wikimedia.org/v2/stream/recent
 ## Screenshots
 Note: Further project details can be found in the associated report.
 
-Created by Sidharth Bambah, Jeswanth Yadagani, Ruturaj Nene, and Vedant Dave
+Created by Sidharth Bambah and Jeswanth Yadagani
