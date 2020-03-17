@@ -19,8 +19,8 @@ print('Initializing stream_processor')
 
 #Global Variables for Kafka
 KAFKA_TOPIC_read = 'wikipedia'
-KAFKA_BROKER_read = '35.231.177.25:9092'
-#KAFKA_BROKER_read = '35.185.103.25:9092' 
+# KAFKA_BROKER_read = '35.231.177.25:9092'
+KAFKA_BROKER_read = '35.185.103.25:9092' 
 
 #Global Variables for Line Charts
 additionLineChartData = []
@@ -70,8 +70,8 @@ def window_sendToKafka(rdd):
     def doWrite():
         # Kafka Producer
         KAFKA_TOPIC_write = 'processed'
-        KAFKA_BROKER_write = '35.231.177.25:9092'
-#         KAFKA_BROKER_write = '35.185.103.25:9092' 
+        # KAFKA_BROKER_write = '35.231.177.25:9092'
+        KAFKA_BROKER_write = '35.185.103.25:9092' 
         processed_data_producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER_write)
         
         #Restructure data
@@ -155,8 +155,8 @@ def aggregate_sendToKafka(rdd):
     def doWrite():
         # Kafka Producer
         KAFKA_TOPIC_write = 'processed'
-        KAFKA_BROKER_write = '35.231.177.25:9092'
-        #KAFKA_BROKER_write = '35.185.103.25:9092' 
+        # KAFKA_BROKER_write = '35.231.177.25:9092'
+        KAFKA_BROKER_write = '35.185.103.25:9092' 
         processed_data_producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER_write)
                 
         #Restructure data
