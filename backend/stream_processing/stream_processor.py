@@ -193,7 +193,10 @@ def aggregate_sendToKafka(rdd):
     
 #Push aggregated daily hourwise changes to MongoDB
 def sendToMongo(rdd):
-    value = rdd.collect()[0]
+    try:
+        value = rdd.collect()[0]
+    except:
+        value = 0
     #Connect to MongoDB
     client = MongoClient('mongodb+srv://wikiStats:wikiStats@cluster0-hm78j.gcp.mongodb.net/daywise_changes?retryWrites=true&w=majority')
     db = client.get_database('wikiStats')
