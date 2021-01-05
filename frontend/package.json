@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "acorn": "^7.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.7.3",
     "chartjs-plugin-streaming": "^1.8.0",
